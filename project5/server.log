@@ -11,3 +11,62 @@
 [2026-04-02 11:21:30] RESERVE  OK     LIB003 reserved "Computer Networks (Tanenbaum)"
 [2026-04-02 11:21:39] QUIT  LIB003 sent disconnect
 [2026-04-02 11:21:39] CLEAN  Slot 0 released. Active sessions: 0
+[2026-04-02 16:57:01] STARTUP  Digital Library Reservation Server starting...
+[2026-04-02 16:57:01] INFO     Listening on port 8080 | Max clients: 5 | Timeout: 120s
+[2026-04-02 16:57:01] INFO  Loaded book state from books.dat.
+[2026-04-02 16:57:01] READY  Server accepting connections on port 8080
+[2026-04-02 16:57:17] SHUTDOWN  SIGINT received — shutting down...
+[2026-04-02 16:57:18] SHUTDOWN  Final book state saved. Server exiting cleanly.
+[2026-04-02 16:57:21] STARTUP  Digital Library Reservation Server starting...
+[2026-04-02 16:57:21] INFO     Listening on port 8080 | Max clients: 5 | Timeout: 120s
+[2026-04-02 16:57:21] INFO  Loaded book state from books.dat.
+[2026-04-02 16:57:21] READY  Server accepting connections on port 8080
+[2026-04-02 16:57:25] SHUTDOWN  SIGINT received — shutting down...
+[2026-04-02 16:57:26] SHUTDOWN  Final book state saved. Server exiting cleanly.
+[2026-04-02 16:57:47] STARTUP  Digital Library Reservation Server starting...
+[2026-04-02 16:57:47] INFO     Listening on port 8080 | Max clients: 5 | Timeout: 120s
+[2026-04-02 16:57:47] INFO  Loaded book state from books.dat.
+[2026-04-02 16:57:47] READY  Server accepting connections on port 8080
+[2026-04-02 16:58:02] CONN  New connection from 127.0.0.1 (slot 0)
+[2026-04-02 16:58:20] AUTH  OK   'LIB003' from 127.0.0.1
+[2026-04-02 16:58:20] LIST  Sent book catalogue to LIB003
+[2026-04-02 16:58:48] RESERVE  OK     LIB003 reserved "The Art of Computer Programming"
+[2026-04-02 16:59:52] CONN  New connection from 127.0.0.1 (slot 1)
+[2026-04-02 17:00:12] AUTH  OK   'LIB007' from 127.0.0.1
+[2026-04-02 17:00:12] LIST  Sent book catalogue to LIB007
+[2026-04-02 17:00:18] RESERVE  DENIED  LIB007 requested "The Art of Computer Programming" (held by LIB003)
+[2026-04-02 17:00:43] QUIT  LIB007 sent disconnect
+[2026-04-02 17:00:43] CLEAN  Slot 1 released. Active sessions: 1
+[2026-04-02 17:00:48] QUIT  LIB003 sent disconnect
+[2026-04-02 17:00:48] CLEAN  Slot 0 released. Active sessions: 0
+[2026-04-02 17:01:19] SHUTDOWN  SIGINT received — shutting down...
+[2026-04-02 17:01:20] SHUTDOWN  Final book state saved. Server exiting cleanly.
+[2026-04-02 17:01:27] STARTUP  Digital Library Reservation Server starting...
+[2026-04-02 17:01:27] INFO     Listening on port 8080 | Max clients: 5 | Timeout: 120s
+[2026-04-02 17:01:27] INFO  Loaded book state from books.dat.
+[2026-04-02 17:01:27] READY  Server accepting connections on port 8080
+[2026-04-02 17:01:45] CONN  New connection from 127.0.0.1 (slot 0)
+[2026-04-02 17:01:57] AUTH  OK   'LIB001' from 127.0.0.1
+[2026-04-02 17:01:57] LIST  Sent book catalogue to LIB001
+[2026-04-02 17:03:59] TIMEOUT  LIB001 evicted after 120s inactivity
+[2026-04-02 17:03:59] CLEAN  Slot 0 released. Active sessions: 0
+[2026-04-02 17:04:57] SHUTDOWN  SIGINT received — shutting down...
+[2026-04-02 17:04:58] SHUTDOWN  Final book state saved. Server exiting cleanly.
+[2026-04-02 17:05:27] STARTUP  Digital Library Reservation Server starting...
+[2026-04-02 17:05:27] INFO     Listening on port 8080 | Max clients: 5 | Timeout: 120s
+[2026-04-02 17:05:27] INFO  Loaded book state from books.dat.
+[2026-04-02 17:05:27] READY  Server accepting connections on port 8080
+[2026-04-02 17:05:36] CONN  New connection from 127.0.0.1 (slot 0)
+[2026-04-02 17:05:39] AUTH  OK   'LIB001' from 127.0.0.1
+[2026-04-02 17:05:39] LIST  Sent book catalogue to LIB001
+[2026-04-02 17:06:58] RESERVE  OK     LIB001 reserved "Computer Organization and Design"
+[2026-04-02 17:07:13] CONN  New connection from 127.0.0.1 (slot 1)
+[2026-04-02 17:07:16] AUTH  OK   'LIB001' from 127.0.0.1
+[2026-04-02 17:07:16] LIST  Sent book catalogue to LIB001
+[2026-04-02 17:07:25] RESERVE  DENIED  LIB001 requested "Computer Organization and Design" (held by LIB001)
+[2026-04-02 17:07:49] QUIT  LIB001 sent disconnect
+[2026-04-02 17:07:49] CLEAN  Slot 1 released. Active sessions: 1
+[2026-04-02 17:08:20] SHUTDOWN  SIGINT received — shutting down...
+[2026-04-02 17:08:20] DISCONNECT  LIB001 closed the connection
+[2026-04-02 17:08:20] CLEAN  Slot 0 released. Active sessions: 0
+[2026-04-02 17:08:21] SHUTDOWN  Final book state saved. Server exiting cleanly.

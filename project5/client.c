@@ -67,17 +67,24 @@ static void display_book_list(const char *payload)
     strncpy(buf, payload, MAX_PAYLOAD_LEN - 1);
     buf[MAX_PAYLOAD_LEN - 1] = '\0';
 
-    char *line = strtok(buf, "\n");
+    /* Use strtok_r (reentrant) so the outer line-split state and the
+     * inner field-split state do not share the same hidden pointer.
+     * strtok() uses one global pointer — calling strtok(line,"|") inside
+     * the outer strtok(NULL,"\n") loop overwrites that pointer and the
+     * outer loop loses its position after the first book.                 */
+    char *outer_save;
+    char *line = strtok_r(buf, "\n", &outer_save);
     if (!line) return;
 
     int count = atoi(line);    /* first line is the book count — skip display */
     (void)count;
 
-    while ((line = strtok(NULL, "\n")) != NULL) {
-        /* Parse "index|title|status" */
-        char *idx_str = strtok(line, "|");
-        char *title   = strtok(NULL, "|");
-        char *status  = strtok(NULL, "|");
+    while ((line = strtok_r(NULL, "\n", &outer_save)) != NULL) {
+        /* Parse "index|title|status" using its OWN save pointer */
+        char *inner_save;
+        char *idx_str = strtok_r(line,  "|", &inner_save);
+        char *title   = strtok_r(NULL,  "|", &inner_save);
+        char *status  = strtok_r(NULL,  "|", &inner_save);
         if (!idx_str || !title || !status) continue;
 
         int is_avail = (strcmp(status, "available") == 0);
@@ -281,4 +288,3 @@ int main(int argc, char *argv[])
     printf(C_CYAN "\n  Session closed. Goodbye, %s\n\n" C_RESET, lib_id_input);
     return 0;
 }
-

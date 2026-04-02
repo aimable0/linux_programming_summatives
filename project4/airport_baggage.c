@@ -338,7 +338,7 @@ static void *monitor_thread(void *arg)
         report_no++;
         printf("\n");
         printf("╔══════════════════════════════════════════╗\n");
-        printf("║          MONITOR REPORT #%-2d               ║\n", report_no);
+        printf("║          MONITOR REPORT #%-2d              ║\n", report_no);
         printf("╠══════════════════════════════════════════╣\n");
         printf("║  Total loaded onto belt  : %-14d║\n", snap_loaded);
         printf("║  Total dispatched        : %-14d║\n", snap_dispatched);
