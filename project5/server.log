@@ -1,0 +1,13 @@
+[2026-04-02 11:07:33] STARTUP  Digital Library Reservation Server starting...
+[2026-04-02 11:07:33] INFO     Listening on port 8080 | Max clients: 5 | Timeout: 120s
+[2026-04-02 11:07:33] INFO  No books.dat found — using default catalogue.
+[2026-04-02 11:07:33] READY  Server accepting connections on port 8080
+[2026-04-02 11:07:42] CONN  New connection from 127.0.0.1 (slot 0)
+[2026-04-02 11:09:42] TIMEOUT  Slot 0 timed out during auth phase
+[2026-04-02 11:09:42] CLEAN  Slot 0 released. Active sessions: 0
+[2026-04-02 11:21:11] CONN  New connection from 127.0.0.1 (slot 0)
+[2026-04-02 11:21:17] AUTH  OK   'LIB003' from 127.0.0.1
+[2026-04-02 11:21:17] LIST  Sent book catalogue to LIB003
+[2026-04-02 11:21:30] RESERVE  OK     LIB003 reserved "Computer Networks (Tanenbaum)"
+[2026-04-02 11:21:39] QUIT  LIB003 sent disconnect
+[2026-04-02 11:21:39] CLEAN  Slot 0 released. Active sessions: 0
